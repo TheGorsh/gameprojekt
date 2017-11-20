@@ -3,7 +3,7 @@ import pygame
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 
-pygame.display.set_caption("Pygame-Tutorial: Grundlagen")
+pygame.display.set_caption("Das grosse HAW-Spiel")
 pygame.mouse.set_visible(1)
 pygame.key.set_repeat(1, 30)
 
