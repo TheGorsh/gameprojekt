@@ -29,7 +29,7 @@ def main():
         clock.tick(30)
 
         # screen-Surface mit Schwarz (RGB = 0, 0, 0) füllen.
-        screen.fill((0, 0, 0))
+        screen.fill((0, 255, 0))
 
          # Alle aufgelaufenen Events holen und abarbeiten.
         for event in pygame.event.get():
