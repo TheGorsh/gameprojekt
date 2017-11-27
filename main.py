@@ -50,3 +50,11 @@ def main():
 if __name__ == '__main__':
     # Unsere Main-Funktion aufrufen.
     main()
+
+image = pygame.image.load("Fabi.jpeg")
+
+if image.get.alpha() is None:
+    image = image.convert()
+else:
+    image.convert_alpha()
+
