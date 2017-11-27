@@ -58,3 +58,6 @@ if image.get.alpha() is None:
 else:
     image.convert_alpha()
 
+image.set_colorkey((255, 0, 255), pygame.RLEACCEL)
+
+
