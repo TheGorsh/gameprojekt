@@ -51,13 +51,23 @@ if __name__ == '__main__':
     # Unsere Main-Funktion aufrufen.
     main()
 
-image = pygame.image.load("Fabi.jpeg")
+# Hilfsfunktion, um ein Bild zu laden:
+def loadImage("Fabi.jpeg", colorkey=None)
+    # Pygame das Bild laden lassen.
+    image = pygame.image.load("Fabi.jpeg")
 
-if image.get.alpha() is None:
-    image = image.convert()
-else:
-    image.convert_alpha()
+    # Das Pixelformat der Surface an den Bildschirm (genauer: die screen-Surface) anpassen.
+    # Dabei die passende Funktion verwenden, je nach dem, ob wir ein Bild mit Alpha-Kanal haben oder nicht.
+    if image.get.alpha() is None:
+        image = image.convert()
+    else:
+        image.convert_alpha()
 
-image.set_colorkey((255, 0, 255), pygame.RLEACCEL)
-
+    # Colorkey des Bildes setzen, falls nicht None.
+    # Bei -1 den Pixel im Bild an Position (0, 0) als Colorkey verwenden.
+    if colorkey is not None:
+        if colorkey is -1:
+            colorkey = image.get_at((0,0))
+        image.set_colorkey((255, 0, 255), pygame.RLEACCEL)
+    return image
 
