@@ -13,7 +13,7 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
 
-    # Titel des Fensters setzen, Mauszeiger nicht verstecken und Tastendrücke wiederholt senden
+    # Titel des Fensters setzen, Mauszeiger nicht verstecken und Tastendrücke wiederholt senden.
     pygame.display.set_caption("Das grosse HAW-Spiel")
     pygame.mouse.set_visible(1)
     pygame.key.set_repeat(1, 30)
@@ -29,13 +29,13 @@ def main():
         clock.tick(30)
 
         # screen-Surface mit Schwarz (RGB = 0, 0, 0) füllen.
-        screen.fill((0, 255, 0))
+        #screen.fill((0, 255, 0))
 
-         # Alle aufgelaufenen Events holen und abarbeiten.
+        # Alle aufgelaufenen Events holen und abarbeiten.
         for event in pygame.event.get():
             # Spiel beenden, wenn wir ein QUIT-Event finden.
             if event.type == pygame.QUIT:
-                 running = False
+                running = False
 
             # Wir interessieren uns auch für "Taste gedrückt"-Events.
             if event.type == pygame.KEYDOWN:
@@ -46,28 +46,10 @@ def main():
             # Inhalt von screen anzeigen.
             pygame.display.flip()
 
+
 # Überprüfen, ob dieses Modul als Programm läuft und nicht in einem anderen Modul importiert wird.
 if __name__ == '__main__':
     # Unsere Main-Funktion aufrufen.
     main()
 
-# Hilfsfunktion, um ein Bild zu laden:
-def loadImage("Fabi.jpeg", colorkey=None)
-    # Pygame das Bild laden lassen.
-    image = pygame.image.load("Fabi.jpeg")
-
-    # Das Pixelformat der Surface an den Bildschirm (genauer: die screen-Surface) anpassen.
-    # Dabei die passende Funktion verwenden, je nach dem, ob wir ein Bild mit Alpha-Kanal haben oder nicht.
-    if image.get.alpha() is None:
-        image = image.convert()
-    else:
-        image.convert_alpha()
-
-    # Colorkey des Bildes setzen, falls nicht None.
-    # Bei -1 den Pixel im Bild an Position (0, 0) als Colorkey verwenden.
-    if colorkey is not None:
-        if colorkey is -1:
-            colorkey = image.get_at((0,0))
-        image.set_colorkey((255, 0, 255), pygame.RLEACCEL)
-    return image
 
