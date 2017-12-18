@@ -33,14 +33,14 @@ def main():
     # Initialisieren aller Pygame-Module und
     # Fenster erstellen (wir bekommen eine Surface, die den Bildschirm repräsentiert).
     pygame.init()
-    screen = pygame.display.set_mode((880, 600))
+    screen = pygame.display.set_mode((750, 600))
 
     # Titel des Fensters setzen, Mauszeiger nicht verstecken und Tastendrücke wiederholt senden.
-    pygame.display.set_caption("Das grosse HAW-Spiel")
+    pygame.display.set_caption("Detektiv Krause ermittelt")
     pygame.mouse.set_visible(1)
     pygame.key.set_repeat(1, 30)
 
-    image = load_image("eroberung.jpg")
+    image = load_image("Deutschland karte.png")
     screen.blit(image, (0,-20))
     # Clock-Objekt erstellen, das wir benötigen, um die Framerate zu begrenzen.
     clock = pygame.time.Clock()
