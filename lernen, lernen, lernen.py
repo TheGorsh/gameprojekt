@@ -10,6 +10,7 @@ NumberTry = 0
 city = 0
 location = 0
 LocationCity = 0
+Lives = 3
 
 
 
@@ -19,9 +20,9 @@ def displayIntro():
             'One beautiful day you get a mysterious letter from an anonymous person.\n'
             '\n'
             'Hello Mr. Smith,\n'
-            'I have a very interesting but even for you unsolveable case.\n'
-            'I kidnapped my neighbour and hided her at a safe and unfoundable place. A bomb is hided near at her. In 2 hours it will detonate.\n'
-            'If you will find her (what you wont), I will accept my loss. If not, than she will die and you will loos your reputation.\n'
+            'I have a very interesting but unsolvable case.\n'
+            'I kidnapped my neighbour and hided her at a safe and unfindable place. A bomb is hidden near her. In 2 hours it will detonate.\n'
+            'If you will find her (what is not possible), I will accept that I lost. If not, she will die and you will loose your reputation.\n'
             'I wish you good luck.\n'
             'Yours sincerly.\n'
             'Mr.X\n')
@@ -33,8 +34,8 @@ def Olympia(location):
         print('You enter the football pitch...')
         time.sleep(2)
         print(
-            'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-            'You enter the football pitch and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+            'And see a woman with her arms and legs tied together. Next to her you see a teddybear, which is probably the bomb.\n'
+            'You enter the football pitch and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
             'No problem, but we have to defuse the bomb. Lets see...\n'
             'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
             'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -42,17 +43,21 @@ def Olympia(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-                'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+                'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Olympiastadion.\n'
                 'Congratulations!\n')
     else:
         print('You enter the Olympiastadion and hear a terrible scream...')
         time.sleep(2)
         print('You enter the football pitch...')
         time.sleep(2)
+        Lives = Lives-1
         print(
             'And see a stadium full of people celebrating a goal for their team.\n'
             'Bloody hell...Lets look for another location.\n'
-            'Type 5 to look at the Television Tower, 2 to fly to Hamburg or 3 to fly to Munich')
+            'Type 5 to look at the Television Tower, 2 to fly to Hamburg or 3 to fly to Munich\n'
+            'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 5:
             TV()
@@ -68,8 +73,8 @@ def TV(location):
         print('You enter the highest floor of the Tower...')
         time.sleep(2)
         print(
-            'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-            'You enter the floor and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+            'And see a woman with her arms and legs tied together. Next to her you see a little teddybear, which is probably the bomb.\n'
+            'You enter the floor and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
             'No problem, but we have to defuse the bomb. Lets see...\n'
             'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
             'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -77,17 +82,21 @@ def TV(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-                'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+                'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Television Tower.\n'
                 'Congratulations!\n')
     else:
         print('You enter the Television Tower and hear a terrible scream...')
         time.sleep(2)
         print('You enter the highest floor of the tower...')
         time.sleep(2)
+        Lives = Lives-1
         print(
             'And see a woman screaming because of her height anxiety.\n'
             'Man oh man...Lets look for another location.\n'
-            'Type 4 to look at the Olympiastadion, 2 to fly to Hamburg or 3 to fly to Munich')
+            'Type 4 to look at the Olympiastadion, 2 to fly to Hamburg or 3 to fly to Munich'
+            'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 4:
             Olympia()
@@ -103,8 +112,8 @@ def Elphi(location):
         print('You open the door to the concert hall...')
         time.sleep(2)
         print(
-        'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-        'You enter the concert hall and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+        'And see a woman with her arms and legs tied together. Next to her you see a little teddybear, which is probably the bomb.\n'
+        'You enter the concert hall and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
         'No problem, but we have to defuse the bomb. Lets see...\n'
         'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
         'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -112,17 +121,21 @@ def Elphi(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-            'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+            'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
             'Congratulations!\n')
     else:
         print('You enter the Elbe Philharmonic Hall and hear a terrible scream...')
         time.sleep(2)
         print('You open the door to the concert hall...')
         time.sleep(2)
+        Lives = Lives-1
         print(
         'And see a concert hall full of people and a stout woman in a beautiful dress on the stage screaming for her life.\n'
         'Well...that was nothing. Lets look for another location.\n'
-        'Type 7 to look at the Dungeon, 1 to fly to Berlin or 3 to fly to Munich')
+        'Type 7 to look at the Dungeon, 1 to fly to Berlin or 3 to fly to Munich'
+        'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 7:
             Dungeon()
@@ -139,7 +152,7 @@ def Dungeon(location):
         time.sleep(2)
         print(
         'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-        'You enter the prison room and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+        'You enter the prison room and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
         'No problem, but we have to defuse the bomb. Lets see...\n'
         'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
         'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -147,20 +160,24 @@ def Dungeon(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-            'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+            'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Dungeon.\n'
             'Congratulations!\n')
     else:
         print('You enter the Dungeon and hear a terrible scream...')
         time.sleep(2)
         print('You open the door to the prison room...')
         time.sleep(2)
+        Lives = Lives-1
         print(
         'And see a woman with her arms and legs bound together. "I will save you!!!".\n'
-        'You unbound her and try to help her to stand up. Suddenly she pushes you away and rips the tape of her mouth\n'
+        'You unchain her and try to help her to stand up. Suddenly she pushes you away and rips the tape of her mouth\n'
         'WHAT THE F*** ARE YOU DOING??? You think thats a location to harass some women. SECURITY!!!\n'
         'In a few seconds a large security guard comes around, takes you by the collar and throws you out of the entry.'
         'Damn it...Lets look for another location.\n'
-        'Type 6 to look at the Elbe Philharmonic Hall, 1 to fly to Berlin or 3 to fly to Munich')
+        'Type 6 to look at the Elbe Philharmonic Hall, 1 to fly to Berlin or 3 to fly to Munich'
+        'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 6:
             Elphi()
@@ -177,7 +194,7 @@ def Beer(location):
         time.sleep(2)
         print(
         'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-        'You enter the Hofbraeuhaus and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+        'You enter the Hofbraeuhaus and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
         'No problem, but we have to defuse the bomb. Lets see...\n'
         'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
         'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -185,17 +202,21 @@ def Beer(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-            'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+            'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Hofbraeuhaus.\n'
             'Congratulations!\n')
     else:
         print('You enter the Hofbraeuhaus and hear a terrible scream...')
         time.sleep(2)
         print('You open the door...')
         time.sleep(2)
+        Lives = Lives-1
         print(
         'And see a woman screaming because her husband drank too much beer and puked on her shoes.\n'
         'Disgusting...Lets look for another location.\n'
-        'Type 9 to look at the Cathedralof Our Dear Lady, 1 to fly to Berlin or 3 to fly to Munich')
+        'Type 9 to look at the Cathedralof Our Dear Lady, 1 to fly to Berlin or 3 to fly to Munich'
+        'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 9:
             Lady()
@@ -212,7 +233,7 @@ def Lady(location):
         time.sleep(2)
         print(
             'And see a woman with her arms and legs bound together. Next to her you see a little teddybear, which is probably the bomb.\n'
-            'You enter the Cathedral and liberate the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
+            'You enter the Cathedral and unchain the woman. "Thank you very much, Mr. Smith. You saved my life", she screams.\n'
             'No problem, but we have to defuse the bomb. Lets see...\n'
             'You extract the bomb carefully out of the teddy bear. It is a "Guess-a-number"-bomb.\n'
             'You have to guess a number between 1 and 50 in 5 tries to extract the bomb, otherwise it will detonate.\n'
@@ -220,17 +241,21 @@ def Lady(location):
         NumberTry = int(input())
         if NumberTry == Number:
             print(
-                'Hurray!!! You found the number. You saved a beautiful woman and (more importantly) the Elbe Philharmonic Hall.\n'
+                'Hooray!!! You found the number. You saved a beautiful woman and (more importantly) the Cathedral.\n'
                 'Congratulations!\n')
     else:
         print('You enter the Cathedral of Our Dear Lady and hear a terrible scream...')
         time.sleep(2)
         print('You enter the Cathedral...')
         time.sleep(2)
+        Lives = Lives-1
         print(
             'And see a Cathedral full of people singing at a church service.\n'
             'God,forgive me...Lets look for another location.\n'
-            'Type 8 to look at the Hofbraeuhaus, 2 to fly to Hamburg or 3 to fly to Munich')
+            'Type 8 to look at the Hofbraeuhaus, 2 to fly to Hamburg or 3 to fly to Munich'
+        'Tries Left: ') print(Lives)
+        if Lives == 0
+            verloren()
         LocationCity = int(input())
         if LocationCity == 8:
             Beer()
@@ -278,6 +303,12 @@ def chooseCity():
         Hamburg()
      if city == 3:
          Munich()
+            
+def verloren():
+      print('You lost! The game will restart now.')
+      
+def gewonnen():
+      print('You won!')
 
 displayIntro()
 print('Do you want to start or to find out how to play? (Type "start" or "rules")')
@@ -286,9 +317,9 @@ if Play == playGame:
     print('OK. Lets start.')
     chooseCity()
 if Play == HowToPlay:
-    print ('There are three cities (Berlin, Hamburg and Munich) that are possibly the searched place. In each one are two locations, in which the woman could be hided.\n'
-           'You have a total of three tries to find the right location. To begin tap 1, 2 or 3 for the city you want to search in. Than one of numbers 4-9 to look at the locations.\n'
-           'If you find the right location in three tries, you win, if not, you lose. Now have fun and enjoy to be a professional detective :D')
+    print ('There are three cities (Berlin, Hamburg and Munich) that can be the place you look for. In each one are two locations, in which the woman could be hided.\n'
+           'You have a total of three tries to find the right location. To start, tap 1, 2 or 3 for the city you want to search in. Than one of the numbers 4-9 to look at the locations.\n'
+           'If you find the right location within three tries, you win, if not, you lose. Now have fun and enjoy to be a professional detective :D')
 if Play != playGame and Play != HowToPlay:
     print('You entered a wrong word. Please restart the game ;)')
 
